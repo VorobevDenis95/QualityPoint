@@ -10,7 +10,7 @@ const router = createBrowserRouter([
     element: <List />,
   },
   {
-    path: "QualityPoint/employee/:id",
+    path: "/QualityPoint/employee/:id",
     element: <Employee />,
   },
 ]);
