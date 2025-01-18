@@ -4,7 +4,7 @@ import { TEmployee } from "../types/empoyees.types";
 import { TDataRequest, TPaginationList } from "../types/api.types";
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL,
+  baseURL: "https://backend-test-myf3.onrender.com/",
 });
 
 export function useEmployees({ page, limit, search }: TDataRequest) {
