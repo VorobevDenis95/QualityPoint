@@ -64,7 +64,7 @@ const List = () => {
         dataSource={dataSource}
         columns={columns}
         onRow={(item) => ({
-          onClick: () => navigate(`/employee/${item.id}`),
+          onClick: () => navigate(`/QualityPoint/employee/${item.id}`),
           style: { cursor: "pointer" },
         })}
         pagination={{
