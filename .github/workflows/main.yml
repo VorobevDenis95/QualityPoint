@@ -10,12 +10,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
         node-version: '20'
+
+    - name: Set up environment variables
+      run: echo "VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }}" >> .env.production
 
     - name: Install dependencies and build
       run: |
